@@ -12,23 +12,7 @@
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": [
-    // Git setup
-    "apt-get update && apt-get install -y git",
-    "git config --global init.defaultBranch master",
-    "git init",
-    
-    // Angular CLI setup
-    "npm install -g @angular/cli",
-    
-    // Spring CLI setup
-   "curl -s 'https://get.sdkman.io' | bash", 
-   "source '$HOME/.sdkman/bin/sdkman-init.sh'",
-   "sdk install springboot",
-    
-    // Project setup
-    "spring init --dependencies=web,devtools,lombok --groupId=com.suhruth.app --build=maven --java-version=17 backend"
-  ],
+  "postCreateCommand": "npm install -g @angular/cli && sdk install springboot",
   "forwardPorts": [8080, 4200],
   "customizations": {
     "vscode": {

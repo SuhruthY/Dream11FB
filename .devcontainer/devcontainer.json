@@ -12,7 +12,7 @@
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "npm install -g @angular/cli && sdk install springboot && spring init --build=maven --java-version=17 --dependencies=web,devtools,lombok --groupId=com.suhruth.app --artifactId=backend backend",
+  "postCreateCommand": "npm install -g @angular/cli && echo 'npm install complete' && sdk install springboot && echo 'SpringBoot installed' && spring init --build=maven --java-version=17 --dependencies=web,devtools,lombok --groupId=com.suhruth.app --artifactId=backend backend && echo 'Spring init complete'",
   "forwardPorts": [8080, 4200],
   "customizations": {
     "vscode": {
